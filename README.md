@@ -47,8 +47,8 @@ npx @deepseek-ai/dsh web
 **安装**：
 
 ```bash
-git clone https://github.com/feicaiclub/剧本拆解工作流-DSH-版.git
-cd 剧本拆解工作流-DSH-版 && ./install.sh
+git clone https://github.com/feicaiclub/script-breakdown-dsh.git
+cd script-breakdown-dsh && ./install.sh
 ```
 
 安装脚本只做一件事：把 `preset/` 复制到 `~/.dsh/.agent-presets/script-breakdown/`。preset 目录每次读取都会重扫，**复制完立刻生效，不用重启**。

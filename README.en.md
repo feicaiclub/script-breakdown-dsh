@@ -47,8 +47,8 @@ npx @deepseek-ai/dsh web
 **Install**:
 
 ```bash
-git clone https://github.com/feicaiclub/剧本拆解工作流-DSH-版.git
-cd 剧本拆解工作流-DSH-版 && ./install.sh
+git clone https://github.com/feicaiclub/script-breakdown-dsh.git
+cd script-breakdown-dsh && ./install.sh
 ```
 
 The script does one thing: copy `preset/` to `~/.dsh/.agent-presets/script-breakdown/`. Preset directories are re-scanned on every read, so it is **live immediately — no restart**.
