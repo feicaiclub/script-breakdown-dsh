@@ -158,7 +158,7 @@ Please read this section. It decides whether you'll be disappointed.
 So it is a **generic skeleton, not a finished product**:
 
 - Shot granularity uses generic defaults (5s baseline, 3s for fast cuts, 10s for emotional beats), not your production's
-- Prompt constraints are **deliberately loose** — they guarantee subject, action, environment, camera language, lighting and duration are present, but nothing is pinned to hard quantitative standards
+- Prompt constraints are **deliberately loose** — they check that subject, action, environment, camera language, lighting and duration are all present; quantification stops at coarse tiers like 80–150 characters per prompt, nothing pinned to the precision your format actually needs
 - The seven-part structure targets **Jimeng**; another platform needs another structure
 - Asset prompts cover appearance / wardrobe / material / consistency only — no overall art direction, no micro-expressions, no frame-accurate timeline
 
@@ -184,7 +184,7 @@ The entire methodology is markdown. Edit it in any text editor, save, and the ne
 ### The four most common modifications
 
 **① Frame-accurate timing, micro-expressions**
-Add columns to `preset/skills/script-breakdown-stage1/templates/storyboard-table.md` (e.g. "micro-expression", "beat"), then change the duration rule in the `SKILL.md` next to it. Stage 3 copies the new duration column automatically.
+Add columns to `preset/skills/script-breakdown-stage1/templates/storyboard-table.md` (e.g. "micro-expression", "beat"), then change the duration rule in the `SKILL.md` next to it. Stage 3 copies the new duration column — but its own `SKILL.md` and `jimeng-shot-template.md` each restate the old tiers, so change those too or the two rules will contradict each other.
 
 **② A different video generation platform**
 The seven-part structure is Jimeng-specific. For Kling / Hailuo / Veo, replace `preset/skills/script-shot-prompts/templates/jimeng-shot-template.md` wholesale and rewrite the "七段式" and "写作规则" sections of the adjacent `SKILL.md` for the new platform (English input, parameters, negative prompts, and so on).
@@ -222,11 +222,11 @@ Easiest path: copy an existing skill directory as a template — the structure, 
 └── assets/                           README figures
 ```
 
-**14 files, 646 lines, roughly 30,000 characters of methodology. Zero TypeScript, zero dependencies, zero build.**
+**14 files, 646 lines, roughly 13,000 characters of methodology. Zero TypeScript, zero dependencies, zero build.**
 
 A few design points worth calling out:
 
-- **Skills are progressively disclosed.** Only four `description` lines (~1,250 characters total) stay resident in context. A `SKILL.md` body is read only when it matches; `references/` and `templates/` are read only when that body names them. So 30,000 characters of methodology costs almost nothing day to day.
+- **Skills are progressively disclosed.** Only four `description` lines (~460 characters total) stay resident in context. A `SKILL.md` body is read only when it matches; `references/` and `templates/` are read only when that body names them. So 13,000 characters of methodology costs almost nothing day to day — adding your own standards to it is cheap.
 - **Only five tool rows are mounted**: `tool-fs` / `tool-fs-search` / `tool-ask-user` / `tool-todo` / `tool-skill`. No shell, no network, no generation API — it is physically unable to delete your files or quietly call a service.
 - **Skills are preset-scoped**, registered into this mode's own layer, so they don't pollute your other modes.
 - **Long scripts are chunked by scene/act** (triggered at 20,000 characters), shot numbers stay continuous across the whole film, and the pieces are merged before anything is written. The threshold is a safety multiple of the host `tool-result-pruner`'s 8,192-character truncation line, not an arbitrary number.

@@ -158,7 +158,7 @@ cd script-breakdown-dsh && ./install.sh
 所以它是一个**通用架子**，不是一个成品：
 
 - 分镜粒度是通用口径（默认 5 秒、快切 3 秒、情绪重场 10 秒），不是你片子的口径
-- 提示词约束写得**刻意很松** —— 只保证「有主体、有动作、有环境、有镜头语言、有光影、有时长」，没有卡死到具体量化标准
+- 提示词约束写得**刻意很松** —— 只保证「有主体、有动作、有环境、有镜头语言、有光影、有时长」这几项在不在；量化只到「每条 80-150 字」这种粗档，没往你片子真正要的精度上卡
 - 七段式是**即梦口径**，换平台就要换
 - 资产提示词只覆盖了外貌 / 服装 / 材质 / 一致性这几项，没有整体视觉设定、没有微表情、没有精确到帧的时间轴
 
@@ -184,7 +184,7 @@ cd script-breakdown-dsh && ./install.sh
 ### 四个最常见的改造
 
 **① 要精确到秒、要写微表情**
-给 `preset/skills/script-breakdown-stage1/templates/storyboard-table.md` 加列（比如「微表情」「节拍点」），再去同目录 `SKILL.md` 把「时长」那条规则改成你的档位。阶段 3 会自动照抄新的时长列。
+给 `preset/skills/script-breakdown-stage1/templates/storyboard-table.md` 加列（比如「微表情」「节拍点」），再去同目录 `SKILL.md` 把「时长」那条规则改成你的档位。阶段 3 会照抄新的时长列——但它的 `SKILL.md` 和 `jimeng-shot-template.md` 里各把旧档位复述了一遍，顺手一起改掉，免得两处规则打架。
 
 **② 换一个视频生成平台**
 七段式是即梦口径。换可灵 / 海螺 / Veo，就整段替换 `preset/skills/script-shot-prompts/templates/jimeng-shot-template.md`，再把同目录 `SKILL.md` 的「七段式」和「写作规则」两段改成新平台的口径（比如它吃英文、吃参数、吃负向提示词）。
@@ -222,11 +222,11 @@ cd script-breakdown-dsh && ./install.sh
 └── assets/                           README 里的图
 ```
 
-**14 个文件，646 行，约 3 万字方法论。零 TypeScript，零依赖，零构建。**
+**14 个文件，646 行，约 1.3 万字方法论。零 TypeScript，零依赖，零构建。**
 
 几个值得说的设计：
 
-- **技能是渐进披露的。** 常驻在上下文里的只有 4 条 `description`（合计约 1250 字）；命中了才读那一个 `SKILL.md` 正文；正文里点名了才去读 `references/` 和 `templates/`。所以挂 3 万字的方法论，日常并不吃上下文。
+- **技能是渐进披露的。** 常驻在上下文里的只有 4 条 `description`（一条一百来字，合计约 460 字）；命中了才读那一个 `SKILL.md` 正文；正文里点名了才去读 `references/` 和 `templates/`。所以挂着 1.3 万字的方法论，日常并不吃上下文 —— 你往里加自己的标准，不用心疼。
 - **工具面只挂 5 行**：`tool-fs` / `tool-fs-search` / `tool-ask-user` / `tool-todo` / `tool-skill`。没有 shell、没有网络、没有任何生成 API —— 它物理上做不到删你的文件或者偷偷调接口。
 - **技能是 preset 独占的**，注册进本模式的 scoped layer，不污染你的其他模式。
 - **长剧本按场 / 幕分块**（≥ 2 万字符触发），镜号全剧连续编号，全部块跑完再合并落盘。阈值是照着宿主 `tool-result-pruner` 8192 字符的截断线留的安全倍率，不是随手定的。
