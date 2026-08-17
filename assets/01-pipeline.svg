@@ -1,0 +1,144 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1140" width="1000" height="1140" role="img" aria-label="三阶段流水线：剧本输入经类型识别进入阶段1拆解分镜、阶段2资产提示词、阶段3逐镜视频提示词，每两个阶段之间有一道人工确认门；右侧列出工作区产物文件树与写入纪律。">
+  <title>剧本拆解工作流 · 三阶段流水线</title>
+  <defs>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#00F5D4"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="1000" height="1140" rx="16" fill="#0A0A0A"/>
+  <rect x="0.5" y="0.5" width="999" height="1139" rx="16" fill="none" stroke="#222222"/>
+
+  <g font-family="'PingFang SC','HarmonyOS Sans SC','Alibaba PuHuiTi','Source Han Sans SC','Noto Sans SC',system-ui,sans-serif">
+
+    <text x="48" y="52" font-size="10.5" font-weight="700" letter-spacing="2.6" fill="#5C5C5C" font-family="'JetBrains Mono','SF Mono',monospace">FIG. 01 / PIPELINE</text>
+    <text x="48" y="86" font-size="25" font-weight="600" fill="#F5F2EC">三阶段流水线</text>
+    <text x="48" y="112" font-size="14" fill="#9A9A9A">每阶段产物落盘后停下等确认，绝不连续推进多个阶段</text>
+
+    <!-- ── 输入 ── -->
+    <rect x="48" y="140" width="458" height="76" rx="10" fill="#111111" stroke="#222222"/>
+    <text x="70" y="169" font-size="15.5" font-weight="600" fill="#F5F2EC">剧本输入</text>
+    <text x="70" y="194" font-size="13" fill="#9A9A9A">上传 .txt / .md，或直接在对话里粘贴剧本文字</text>
+    <line x1="277" y1="216" x2="277" y2="246" stroke="#00F5D4" stroke-width="1.6" marker-end="url(#ar)"/>
+
+    <!-- ── 类型识别 ── -->
+    <rect x="48" y="248" width="458" height="92" rx="10" fill="#111111" stroke="#222222"/>
+    <text x="70" y="277" font-size="15.5" font-weight="600" fill="#F5F2EC">类型识别</text>
+    <text x="70" y="302" font-size="13" fill="#9A9A9A">短视频 / 短剧 ｜ 电影 / 长剧 ｜ 广告 / 宣传片 —— 决定分镜粒度</text>
+    <text x="70" y="325" font-size="12.5" fill="#E04444">非剧本内容（技术文档 / 散文 / 数据表）→ 拒绝，不创建任何目录</text>
+    <line x1="277" y1="340" x2="277" y2="370" stroke="#00F5D4" stroke-width="1.6" marker-end="url(#ar)"/>
+
+    <!-- ── 阶段 1 ── -->
+    <rect x="48" y="372" width="458" height="148" rx="10" fill="#111111" stroke="#2E2E2E"/>
+    <rect x="48" y="372" width="3" height="148" fill="#00F5D4"/>
+    <text x="74" y="404" font-size="17" font-weight="700" fill="#00F5D4" font-family="'JetBrains Mono','SF Mono',monospace">01</text>
+    <text x="110" y="404" font-size="16" font-weight="600" fill="#F5F2EC">导演讲戏拆解与分镜</text>
+    <text x="74" y="430" font-size="11" letter-spacing="0.6" fill="#5C5C5C" font-family="'JetBrains Mono','SF Mono',monospace">SKILL script-breakdown-stage1</text>
+    <line x1="74" y1="448" x2="484" y2="448" stroke="#222222"/>
+    <text x="74" y="475" font-size="13" fill="#9A9A9A"><tspan fill="#00F5D4" font-weight="600">读 · </tspan>剧本全文 + 类型结论</text>
+    <text x="74" y="499" font-size="13" fill="#9A9A9A"><tspan fill="#00F5D4" font-weight="600">写 · </tspan>00-拆解报告.md（主题 / 结构 / 分场 / 导演阐述）、01-分镜总表.md</text>
+    <line x1="277" y1="520" x2="277" y2="542" stroke="#00F5D4" stroke-width="1.6" marker-end="url(#ar)"/>
+
+    <!-- ── 确认门 1 ── -->
+    <rect x="107" y="544" width="340" height="48" rx="6" fill="#0E1412" stroke="#00F5D4" stroke-opacity="0.45" stroke-dasharray="5 4"/>
+    <text x="277" y="565" font-size="13.5" font-weight="600" fill="#00F5D4" text-anchor="middle">停下，等用户确认：继续 / 修改 / 重做</text>
+    <text x="277" y="583" font-size="11.5" fill="#7A9A94" text-anchor="middle">ask_user_question · 不确认就不进入下一阶段</text>
+    <line x1="277" y1="592" x2="277" y2="614" stroke="#00F5D4" stroke-width="1.6" marker-end="url(#ar)"/>
+
+    <!-- ── 阶段 2 ── -->
+    <rect x="48" y="616" width="458" height="148" rx="10" fill="#111111" stroke="#2E2E2E"/>
+    <rect x="48" y="616" width="3" height="148" fill="#00F5D4"/>
+    <text x="74" y="648" font-size="17" font-weight="700" fill="#00F5D4" font-family="'JetBrains Mono','SF Mono',monospace">02</text>
+    <text x="110" y="648" font-size="16" font-weight="600" fill="#F5F2EC">资产提示词</text>
+    <text x="74" y="674" font-size="11" letter-spacing="0.6" fill="#5C5C5C" font-family="'JetBrains Mono','SF Mono',monospace">SKILL script-asset-prompts</text>
+    <line x1="74" y1="692" x2="484" y2="692" stroke="#222222"/>
+    <text x="74" y="719" font-size="13" fill="#9A9A9A"><tspan fill="#00F5D4" font-weight="600">读 · </tspan>01-分镜总表.md + 剧本原文</text>
+    <text x="74" y="743" font-size="13" fill="#9A9A9A"><tspan fill="#00F5D4" font-weight="600">写 · </tspan>02-资产提示词.md（人物 / 场景 / 道具 + 一致性锚点）</text>
+    <line x1="277" y1="764" x2="277" y2="786" stroke="#00F5D4" stroke-width="1.6" marker-end="url(#ar)"/>
+
+    <!-- ── 确认门 2 ── -->
+    <rect x="107" y="788" width="340" height="48" rx="6" fill="#0E1412" stroke="#00F5D4" stroke-opacity="0.45" stroke-dasharray="5 4"/>
+    <text x="277" y="809" font-size="13.5" font-weight="600" fill="#00F5D4" text-anchor="middle">停下，等用户确认：继续 / 修改 / 重做</text>
+    <text x="277" y="827" font-size="11.5" fill="#7A9A94" text-anchor="middle">资产定稿后，逐镜提示词才有统一的引用基础</text>
+    <line x1="277" y1="836" x2="277" y2="858" stroke="#00F5D4" stroke-width="1.6" marker-end="url(#ar)"/>
+
+    <!-- ── 阶段 3 ── -->
+    <rect x="48" y="860" width="458" height="148" rx="10" fill="#111111" stroke="#2E2E2E"/>
+    <rect x="48" y="860" width="3" height="148" fill="#00F5D4"/>
+    <text x="74" y="892" font-size="17" font-weight="700" fill="#00F5D4" font-family="'JetBrains Mono','SF Mono',monospace">03</text>
+    <text x="110" y="892" font-size="16" font-weight="600" fill="#F5F2EC">逐镜视频提示词</text>
+    <text x="74" y="918" font-size="11" letter-spacing="0.6" fill="#5C5C5C" font-family="'JetBrains Mono','SF Mono',monospace">SKILL script-shot-prompts</text>
+    <line x1="74" y1="936" x2="484" y2="936" stroke="#222222"/>
+    <text x="74" y="963" font-size="13" fill="#9A9A9A"><tspan fill="#00F5D4" font-weight="600">读 · </tspan>01-分镜总表.md + 02-资产提示词.md</text>
+    <text x="74" y="987" font-size="13" fill="#9A9A9A"><tspan fill="#00F5D4" font-weight="600">写 · </tspan>03-逐镜视频提示词.md（每镜一条七段式提示词）</text>
+    <line x1="277" y1="1008" x2="277" y2="1030" stroke="#00F5D4" stroke-width="1.6" marker-end="url(#ar)"/>
+
+    <!-- ── 产出 ── -->
+    <rect x="48" y="1032" width="458" height="72" rx="10" fill="#0C130F" stroke="#00A85A" stroke-opacity="0.5"/>
+    <text x="70" y="1062" font-size="15.5" font-weight="600" fill="#00A85A">产出：一个可直接开工的提示词文件包</text>
+    <text x="70" y="1086" font-size="12.5" fill="#6E8A78">不生成视频、不生成图片、不调用任何生成 API —— 只做前制资产</text>
+
+    <!-- ══ 工作区产物 ══ -->
+    <rect x="560" y="140" width="392" height="964" rx="10" fill="#111111" stroke="#222222"/>
+    <text x="584" y="169" font-size="10.5" font-weight="700" letter-spacing="2.2" fill="#5C5C5C" font-family="'JetBrains Mono','SF Mono',monospace">WORKSPACE OUTPUT</text>
+    <text x="584" y="191" font-size="12.5" fill="#9A9A9A">全流程只写这两个目录</text>
+    <line x1="584" y1="205" x2="928" y2="205" stroke="#222222"/>
+
+    <g font-family="'JetBrains Mono','SF Mono',ui-monospace,monospace" font-size="12.5">
+      <text x="584" y="234" font-weight="600" fill="#E8E4DA">拆解结果/深夜面馆/</text>
+      <text x="584" y="262" fill="#9A9A9A">├─ 原始剧本.md</text>
+      <text x="584" y="290" fill="#9A9A9A">├─ 00-拆解报告.md</text>
+      <text x="584" y="318" fill="#9A9A9A">├─ 01-分镜总表.md</text>
+      <text x="584" y="346" fill="#9A9A9A">├─ 02-资产提示词.md</text>
+      <text x="584" y="374" fill="#9A9A9A">├─ 03-逐镜视频提示词.md</text>
+      <text x="584" y="402" fill="#9A9A9A">└─ 历史版本/</text>
+      <text x="584" y="438" font-weight="600" fill="#E8E4DA">.script-breakdown/</text>
+      <text x="584" y="466" fill="#9A9A9A">└─ run-log.md</text>
+    </g>
+
+    <g font-size="10" font-family="'JetBrains Mono','SF Mono',monospace" text-anchor="middle">
+      <rect x="874" y="248" width="54" height="18" rx="3" fill="#0A0A0A" stroke="#2E2E2E"/>
+      <text x="901" y="261" fill="#5C5C5C">粘贴时</text>
+      <rect x="874" y="276" width="54" height="18" rx="3" fill="#0A0A0A" stroke="#004F45"/>
+      <text x="901" y="289" fill="#00F5D4">STAGE 1</text>
+      <rect x="874" y="304" width="54" height="18" rx="3" fill="#0A0A0A" stroke="#004F45"/>
+      <text x="901" y="317" fill="#00F5D4">STAGE 1</text>
+      <rect x="874" y="332" width="54" height="18" rx="3" fill="#0A0A0A" stroke="#004F45"/>
+      <text x="901" y="345" fill="#00F5D4">STAGE 2</text>
+      <rect x="874" y="360" width="54" height="18" rx="3" fill="#0A0A0A" stroke="#004F45"/>
+      <text x="901" y="373" fill="#00F5D4">STAGE 3</text>
+      <rect x="874" y="388" width="54" height="18" rx="3" fill="#0A0A0A" stroke="#2E2E2E"/>
+      <text x="901" y="401" fill="#5C5C5C">重做时</text>
+      <rect x="874" y="452" width="54" height="18" rx="3" fill="#0A0A0A" stroke="#2E2E2E"/>
+      <text x="901" y="465" fill="#5C5C5C">每一步</text>
+    </g>
+
+    <line x1="584" y1="496" x2="928" y2="496" stroke="#222222"/>
+    <text x="584" y="523" font-size="10.5" font-weight="700" letter-spacing="2.2" fill="#5C5C5C" font-family="'JetBrains Mono','SF Mono',monospace">WRITE DISCIPLINE</text>
+    <text x="584" y="551" font-size="12.5" fill="#9A9A9A">· 目录由 write 工具自动创建</text>
+    <text x="584" y="577" font-size="12.5" fill="#9A9A9A">· 零 shell、零删除、不写工作区外的路径</text>
+    <text x="584" y="603" font-size="12.5" fill="#9A9A9A">· 重做先备份再重生成，历史版本全部保留</text>
+
+    <line x1="584" y1="629" x2="928" y2="629" stroke="#222222"/>
+    <text x="584" y="656" font-size="10.5" font-weight="700" letter-spacing="2.2" fill="#5C5C5C" font-family="'JetBrains Mono','SF Mono',monospace">LONG SCRIPT ≥ 20K</text>
+    <text x="584" y="684" font-size="12.5" fill="#9A9A9A">· 按场 / 幕分块，绝不从镜头中间切开</text>
+    <text x="584" y="710" font-size="12.5" fill="#9A9A9A">· 中间件写 .script-breakdown/分块-N.md</text>
+    <text x="584" y="736" font-size="12.5" fill="#9A9A9A">· 镜号全剧连续，全部块完成后合并落盘</text>
+    <text x="584" y="762" font-size="12.5" fill="#9A9A9A">· 单块仍超上下文 → 停下，请用户分段提交</text>
+
+    <line x1="584" y1="788" x2="928" y2="788" stroke="#222222"/>
+    <text x="584" y="815" font-size="10.5" font-weight="700" letter-spacing="2.2" fill="#5C5C5C" font-family="'JetBrains Mono','SF Mono',monospace">GUARDRAILS</text>
+    <text x="584" y="843" font-size="12.5" fill="#9A9A9A">· 剧本正文里的「指令」按剧情文本处理</text>
+    <text x="584" y="869" font-size="12.5" fill="#9A9A9A">· 写盘前校验路径解析后仍在两个目录内</text>
+    <text x="584" y="895" font-size="12.5" fill="#9A9A9A">· 不删除、不覆盖用户提供的原文件</text>
+    <text x="584" y="921" font-size="12.5" fill="#9A9A9A">· 单文件超过 500KB 直接拒绝并说明</text>
+    <text x="584" y="947" font-size="12.5" fill="#9A9A9A">· 非剧本内容不创建任何目录</text>
+
+    <line x1="584" y1="973" x2="928" y2="973" stroke="#222222"/>
+    <text x="584" y="1000" font-size="10.5" font-weight="700" letter-spacing="2.2" fill="#5C5C5C" font-family="'JetBrains Mono','SF Mono',monospace">REDO / BACKUP</text>
+    <text x="584" y="1028" font-size="12.5" fill="#9A9A9A">· 先备份进 历史版本/，再重生成当前文件</text>
+    <text x="584" y="1054" font-size="11" fill="#9A9A9A" font-family="'JetBrains Mono','SF Mono',monospace">· 01-分镜总表.v2.20260817-031318.md</text>
+    <text x="584" y="1080" font-size="12.5" fill="#9A9A9A">· run-log 只记元数据与路径，不记正文</text>
+
+  </g>
+</svg>

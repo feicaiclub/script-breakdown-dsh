@@ -1,0 +1,94 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 800" width="1000" height="800" role="img" aria-label="架构分层：用户在 Web UI 模式下拉中选中「剧本拆解工作流」，即挂载该 preset；preset 内含 persona 总路由、四个专属技能、五行工具面与 compaction 组；底层的沙箱审批、模型路由、会话持久化由 DeepSeek Harness 宿主提供。">
+  <title>它是怎么装进 DeepSeek Harness 的</title>
+  <defs>
+    <marker id="ar2" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#00F5D4"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="1000" height="800" rx="16" fill="#0A0A0A"/>
+  <rect x="0.5" y="0.5" width="999" height="799" rx="16" fill="none" stroke="#222222"/>
+
+  <g font-family="'PingFang SC','HarmonyOS Sans SC','Alibaba PuHuiTi','Source Han Sans SC','Noto Sans SC',system-ui,sans-serif">
+
+    <text x="48" y="52" font-size="10.5" font-weight="700" letter-spacing="2.6" fill="#5C5C5C" font-family="'JetBrains Mono','SF Mono',monospace">FIG. 02 / ARCHITECTURE</text>
+    <text x="48" y="86" font-size="25" font-weight="600" fill="#F5F2EC">它是怎么装进 DeepSeek Harness 的</text>
+    <text x="48" y="112" font-size="14" fill="#9A9A9A">一个自定义 agent preset —— 复制进目录即生效，不改宿主一行代码，不写一行 TypeScript</text>
+
+    <!-- ══ 用户入口 ══ -->
+    <rect x="48" y="138" width="904" height="88" rx="10" fill="#111111" stroke="#222222"/>
+    <text x="72" y="172" font-size="15" font-weight="600" fill="#F5F2EC">Web UI · 运行模式下拉</text>
+    <text x="72" y="197" font-size="12.5" fill="#9A9A9A">选中即挂载。preset 目录每次读取都重扫，改完存盘，下次对话即生效。</text>
+    <g font-size="12" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',monospace">
+      <rect x="602" y="162" width="72" height="30" rx="3" fill="#0A0A0A" stroke="#2E2E2E"/>
+      <text x="638" y="182" fill="#5C5C5C">Standard</text>
+      <rect x="684" y="162" width="50" height="30" rx="3" fill="#0A0A0A" stroke="#2E2E2E"/>
+      <text x="709" y="182" fill="#5C5C5C">Code</text>
+      <rect x="744" y="162" width="62" height="30" rx="3" fill="#0A0A0A" stroke="#2E2E2E"/>
+      <text x="775" y="182" fill="#5C5C5C">Minimal</text>
+      <rect x="816" y="162" width="112" height="30" rx="3" fill="#00F5D4"/>
+      <text x="872" y="182" fill="#0A0A0A" font-weight="600" font-family="'PingFang SC','Noto Sans SC',sans-serif">剧本拆解工作流</text>
+    </g>
+    <line x1="500" y1="226" x2="500" y2="264" stroke="#00F5D4" stroke-width="1.6" marker-end="url(#ar2)"/>
+    <text x="514" y="251" font-size="11.5" fill="#7A9A94">选中模式 → 把下面这一整套挂到当前会话</text>
+
+    <!-- ══ preset ══ -->
+    <rect x="48" y="266" width="904" height="376" rx="10" fill="#0D0F0F" stroke="#00F5D4" stroke-opacity="0.35" stroke-dasharray="6 5"/>
+    <text x="72" y="298" font-size="10.5" font-weight="700" letter-spacing="2.4" fill="#00F5D4" font-family="'JetBrains Mono','SF Mono',monospace">THIS REPO SHIPS EXACTLY THIS</text>
+    <text x="72" y="320" font-size="11.5" fill="#5C5C5C" font-family="'JetBrains Mono','SF Mono',monospace">~/.dsh/.agent-presets/script-breakdown/</text>
+
+    <!-- persona -->
+    <rect x="72" y="340" width="420" height="138" rx="8" fill="#111111" stroke="#222222"/>
+    <text x="94" y="369" font-size="14.5" font-weight="600" fill="#F5F2EC">persona · 总路由</text>
+    <text x="94" y="389" font-size="11" fill="#5C5C5C" font-family="'JetBrains Mono','SF Mono',monospace">agent.cordis.yml</text>
+    <text x="94" y="415" font-size="12.5" fill="#9A9A9A">· 身份：一名深谙导演思维的 AI 影视编导</text>
+    <text x="94" y="437" font-size="12.5" fill="#9A9A9A">· 什么时候加载哪个技能、什么时候必须停下提问</text>
+    <text x="94" y="459" font-size="12.5" fill="#9A9A9A">· 只遮蔽本模式的会话，不影响其他模式</text>
+
+    <!-- skills -->
+    <rect x="508" y="340" width="420" height="138" rx="8" fill="#111111" stroke="#222222"/>
+    <text x="530" y="369" font-size="14.5" font-weight="600" fill="#F5F2EC">专属技能 × 4</text>
+    <text x="530" y="389" font-size="11" fill="#5C5C5C" font-family="'JetBrains Mono','SF Mono',monospace">skills/ · 只在本模式可见，不污染其他模式</text>
+    <g font-size="11" font-family="'JetBrains Mono','SF Mono',monospace" fill="#E8E4DA">
+      <text x="530" y="411">script-breakdown<tspan fill="#5C5C5C" font-family="'PingFang SC','Noto Sans SC',sans-serif">　总路由 · 编排与验收</tspan></text>
+      <text x="530" y="429">script-breakdown-stage1<tspan fill="#5C5C5C" font-family="'PingFang SC','Noto Sans SC',sans-serif">　阶段 1</tspan></text>
+      <text x="530" y="447">script-asset-prompts<tspan fill="#5C5C5C" font-family="'PingFang SC','Noto Sans SC',sans-serif">　阶段 2</tspan></text>
+      <text x="530" y="465">script-shot-prompts<tspan fill="#5C5C5C" font-family="'PingFang SC','Noto Sans SC',sans-serif">　阶段 3</tspan></text>
+    </g>
+
+    <!-- 工具面 -->
+    <rect x="72" y="494" width="420" height="132" rx="8" fill="#111111" stroke="#222222"/>
+    <text x="94" y="523" font-size="14.5" font-weight="600" fill="#F5F2EC">工具面 · 只挂 5 行</text>
+    <g font-size="11" font-family="'JetBrains Mono','SF Mono',monospace" text-anchor="middle">
+      <rect x="94" y="536" width="66" height="24" rx="3" fill="#0A0A0A" stroke="#2E2E2E"/><text x="127" y="552" fill="#9A9A9A">tool-fs</text>
+      <rect x="168" y="536" width="106" height="24" rx="3" fill="#0A0A0A" stroke="#2E2E2E"/><text x="221" y="552" fill="#9A9A9A">tool-fs-search</text>
+      <rect x="282" y="536" width="102" height="24" rx="3" fill="#0A0A0A" stroke="#2E2E2E"/><text x="333" y="552" fill="#9A9A9A">tool-ask-user</text>
+      <rect x="94" y="568" width="82" height="24" rx="3" fill="#0A0A0A" stroke="#2E2E2E"/><text x="135" y="584" fill="#9A9A9A">tool-todo</text>
+      <rect x="184" y="568" width="86" height="24" rx="3" fill="#0A0A0A" stroke="#2E2E2E"/><text x="227" y="584" fill="#9A9A9A">tool-skill</text>
+    </g>
+    <text x="94" y="613" font-size="12" fill="#E04444">没有 shell、没有网络、没有任何生成 API</text>
+
+    <!-- compaction -->
+    <rect x="508" y="494" width="420" height="132" rx="8" fill="#111111" stroke="#222222"/>
+    <text x="530" y="523" font-size="14.5" font-weight="600" fill="#F5F2EC">compaction 组</text>
+    <text x="530" y="543" font-size="11" fill="#5C5C5C" font-family="'JetBrains Mono','SF Mono',monospace">isolate realm · 长会话自动压缩</text>
+    <text x="530" y="569" font-size="12.5" fill="#9A9A9A">工具结果超 8192 字符会被截断 —— 这就是长剧本</text>
+    <text x="530" y="591" font-size="12.5" fill="#9A9A9A">必须按场 / 幕分块处理的原因，不是随手定的阈值。</text>
+    <text x="530" y="613" font-size="12" fill="#5C5C5C">拆解一部长片，上下文才不会中途崩掉。</text>
+
+    <line x1="500" y1="642" x2="500" y2="680" stroke="#00F5D4" stroke-width="1.6" marker-end="url(#ar2)"/>
+    <text x="514" y="667" font-size="11.5" fill="#7A9A94">消费宿主能力（不重新实现，也管不着）</text>
+
+    <!-- ══ 宿主 ══ -->
+    <rect x="48" y="682" width="904" height="106" rx="10" fill="#0E1014" stroke="#262A31"/>
+    <text x="72" y="713" font-size="15" font-weight="600" fill="#D2D7DC">DeepSeek Harness 宿主 —— 这些 preset 全都不用管</text>
+    <g font-size="12" text-anchor="middle">
+      <rect x="72" y="727" width="118" height="28" rx="3" fill="#0A0A0A" stroke="#262A31"/><text x="131" y="746" fill="#8A9099">沙箱与审批栈</text>
+      <rect x="198" y="727" width="94" height="28" rx="3" fill="#0A0A0A" stroke="#262A31"/><text x="245" y="746" fill="#8A9099">模型路由</text>
+      <rect x="300" y="727" width="106" height="28" rx="3" fill="#0A0A0A" stroke="#262A31"/><text x="353" y="746" fill="#8A9099">会话持久化</text>
+      <rect x="414" y="727" width="130" height="28" rx="3" fill="#0A0A0A" stroke="#262A31"/><text x="479" y="746" fill="#8A9099">工具与技能注册表</text>
+    </g>
+    <text x="568" y="746" font-size="12" fill="#4F555C">换句话说：这个仓库里没有一行代码在做「跑模型」这件事。</text>
+
+  </g>
+</svg>

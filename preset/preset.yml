@@ -1,0 +1,4 @@
+# script-breakdown agent preset 元数据（纯展示字段，中文可用）。
+# preset id = 安装目录名（script-breakdown），规则 ^[a-z0-9][a-z0-9-]*$。
+name: 剧本拆解工作流
+description: 上传或粘贴剧本，以导演讲戏思维拆解为分镜总表，产出人物/场景/道具与逐镜即梦视频提示词的结构化文件包，不实际生成视频。

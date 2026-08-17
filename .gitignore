@@ -1,0 +1,6 @@
+.DS_Store
+*.swp
+
+# 工作流在工作区里生成的产物，不该进仓库
+拆解结果/
+.script-breakdown/

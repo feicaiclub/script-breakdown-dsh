@@ -1,0 +1,108 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 776" width="1000" height="776" role="img" aria-label="事实来源链：阶段 2 只读 01 分镜总表与剧本原文，阶段 3 只读 01 与 02。最终逐镜提示词里的每个片段都能回溯到上游文件——景别与运镜来自 01，时长严格照抄 01 的时长列，人物锚点措辞来自 02。">
+  <title>事实来源链：每一句话都能回溯到上游文件</title>
+  <defs>
+    <marker id="ar3" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#00F5D4"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="1000" height="776" rx="16" fill="#0A0A0A"/>
+  <rect x="0.5" y="0.5" width="999" height="775" rx="16" fill="none" stroke="#222222"/>
+
+  <g font-family="'PingFang SC','HarmonyOS Sans SC','Alibaba PuHuiTi','Source Han Sans SC','Noto Sans SC',system-ui,sans-serif">
+
+    <text x="48" y="52" font-size="10.5" font-weight="700" letter-spacing="2.6" fill="#5C5C5C" font-family="'JetBrains Mono','SF Mono',monospace">FIG. 03 / SOURCE OF TRUTH</text>
+    <text x="48" y="86" font-size="25" font-weight="600" fill="#F5F2EC">事实来源链：每一句话都能回溯到上游文件</text>
+    <text x="48" y="112" font-size="14" fill="#9A9A9A">跨阶段一致性不靠模型记性，靠「照抄」和「锚点措辞不漂移」两条硬规则。</text>
+
+    <!-- ══ 01 ══ -->
+    <rect x="48" y="140" width="904" height="130" rx="10" fill="#111111" stroke="#222222"/>
+    <text x="72" y="169" font-size="13.5" font-weight="600" fill="#E8E4DA" font-family="'JetBrains Mono','SF Mono',monospace">01-分镜总表.md</text>
+    <rect x="866" y="154" width="62" height="20" rx="3" fill="#0A0A0A" stroke="#004F45"/>
+    <text x="897" y="168" font-size="10" fill="#00F5D4" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',monospace">STAGE 1</text>
+    <line x1="72" y1="183" x2="928" y2="183" stroke="#222222"/>
+
+    <rect x="72" y="196" width="64" height="56" rx="6" fill="#0A0A0A" stroke="#2E2E2E"/>
+    <text x="104" y="217" font-size="10.5" fill="#5C5C5C" text-anchor="middle">镜号</text>
+    <text x="104" y="241" font-size="13" fill="#E8E4DA" text-anchor="middle">03</text>
+
+    <rect x="144" y="196" width="80" height="56" rx="6" fill="#0A0A0A" stroke="#2E2E2E"/>
+    <text x="184" y="217" font-size="10.5" fill="#5C5C5C" text-anchor="middle">场次</text>
+    <text x="184" y="241" font-size="13" fill="#E8E4DA" text-anchor="middle">第 1 场</text>
+
+    <rect x="232" y="196" width="72" height="56" rx="6" fill="#0A0A0A" stroke="#00F5D4" stroke-opacity="0.6"/>
+    <text x="268" y="217" font-size="10.5" fill="#5C8F88" text-anchor="middle">景别</text>
+    <text x="268" y="241" font-size="13" font-weight="600" fill="#00F5D4" text-anchor="middle">特写</text>
+
+    <rect x="312" y="196" width="64" height="56" rx="6" fill="#0A0A0A" stroke="#00F5D4" stroke-opacity="0.6"/>
+    <text x="344" y="217" font-size="10.5" fill="#5C8F88" text-anchor="middle">运镜</text>
+    <text x="344" y="241" font-size="13" font-weight="600" fill="#00F5D4" text-anchor="middle">推</text>
+
+    <rect x="384" y="196" width="72" height="56" rx="6" fill="#0A0A0A" stroke="#00F5D4" stroke-opacity="0.6"/>
+    <text x="420" y="217" font-size="10.5" fill="#5C8F88" text-anchor="middle">时长</text>
+    <text x="420" y="241" font-size="13" font-weight="600" fill="#00F5D4" text-anchor="middle">5 秒</text>
+
+    <rect x="464" y="196" width="464" height="56" rx="6" fill="#0A0A0A" stroke="#2E2E2E"/>
+    <text x="484" y="217" font-size="10.5" fill="#5C5C5C">画面内容</text>
+    <text x="484" y="241" font-size="13" fill="#E8E4DA">老板的手把荷包蛋轻轻打进面碗。</text>
+
+    <line x1="500" y1="270" x2="500" y2="306" stroke="#00F5D4" stroke-width="1.6" marker-end="url(#ar3)"/>
+    <text x="514" y="293" font-size="11.5" fill="#7A9A94">阶段 2 只读 01 与剧本原文 —— 不凭记忆复述</text>
+
+    <!-- ══ 02 ══ -->
+    <rect x="48" y="308" width="904" height="164" rx="10" fill="#111111" stroke="#222222"/>
+    <text x="72" y="337" font-size="13.5" font-weight="600" fill="#E8E4DA" font-family="'JetBrains Mono','SF Mono',monospace">02-资产提示词.md</text>
+    <rect x="866" y="322" width="62" height="20" rx="3" fill="#0A0A0A" stroke="#004F45"/>
+    <text x="897" y="336" font-size="10" fill="#00F5D4" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',monospace">STAGE 2</text>
+    <line x1="72" y1="351" x2="928" y2="351" stroke="#222222"/>
+
+    <text x="72" y="378" font-size="13.5" font-weight="600" fill="#F5F2EC">面馆老板（60 岁，面馆店主）</text>
+    <rect x="72" y="390" width="560" height="42" rx="6" fill="#000000" stroke="#2A2A2A"/>
+    <text x="92" y="415" font-size="12" fill="#E8E4DA" font-family="'JetBrains Mono','SF Mono',monospace">花白短发，系一条洗得发白的围裙，动作沉稳缓慢。</text>
+
+    <text x="72" y="456" font-size="12.5" fill="#9A9A9A">一致性锚点：</text>
+    <rect x="155" y="441" width="68" height="22" rx="3" fill="#0A0A0A" stroke="#00F5D4" stroke-opacity="0.6"/>
+    <text x="189" y="456" font-size="12" font-weight="600" fill="#00F5D4" text-anchor="middle">花白短发</text>
+    <rect x="231" y="441" width="68" height="22" rx="3" fill="#0A0A0A" stroke="#00F5D4" stroke-opacity="0.6"/>
+    <text x="265" y="456" font-size="12" font-weight="600" fill="#00F5D4" text-anchor="middle">发白围裙</text>
+
+    <text x="660" y="408" font-size="12" fill="#5C5C5C">阶段 3 引用这两个锚点，措辞一字不改</text>
+    <text x="660" y="428" font-size="12" fill="#5C5C5C">—— 人物才不会跨镜变脸。</text>
+
+    <line x1="500" y1="472" x2="500" y2="508" stroke="#00F5D4" stroke-width="1.6" marker-end="url(#ar3)"/>
+    <text x="514" y="495" font-size="11.5" fill="#7A9A94">阶段 3 只读 01 + 02 —— 连剧本原文都不再看</text>
+
+    <!-- ══ 03 ══ -->
+    <rect x="48" y="510" width="904" height="216" rx="10" fill="#111111" stroke="#222222"/>
+    <text x="72" y="539" font-size="13.5" font-weight="600" fill="#E8E4DA" font-family="'JetBrains Mono','SF Mono',monospace">03-逐镜视频提示词.md</text>
+    <rect x="866" y="524" width="62" height="20" rx="3" fill="#0A0A0A" stroke="#004F45"/>
+    <text x="897" y="538" font-size="10" fill="#00F5D4" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',monospace">STAGE 3</text>
+    <line x1="72" y1="553" x2="928" y2="553" stroke="#222222"/>
+
+    <text x="72" y="578" font-size="13" font-weight="600" fill="#F5F2EC">镜 03 · 第 1 场 · 特写推</text>
+
+    <rect x="72" y="590" width="620" height="120" rx="6" fill="#000000" stroke="#2A2A2A"/>
+    <g font-size="12" fill="#E8E4DA" font-family="'JetBrains Mono','SF Mono',ui-monospace,monospace">
+      <text x="92" y="614">面馆老板（花白短发、发白围裙）站在热气升腾的灶台前，右手握汤勺，</text>
+      <text x="92" y="638">把煎得金黄的荷包蛋轻轻打进面碗，动作沉稳缓慢。深夜面馆内景。</text>
+      <text x="92" y="662">镜头：特写，缓推至手部。光线暖黄顶光，氛围安静温暖。</text>
+      <text x="92" y="686">时长 5 秒。</text>
+    </g>
+    <rect x="152" y="619" width="108" height="2" fill="#00F5D4"/>
+    <rect x="128" y="667" width="24" height="2" fill="#00F5D4"/>
+    <rect x="164" y="667" width="12" height="2" fill="#00F5D4"/>
+    <rect x="123" y="691" width="27" height="2" fill="#00F5D4"/>
+
+    <rect x="712" y="598" width="216" height="24" rx="3" fill="#0A0A0A" stroke="#2E2E2E"/>
+    <text x="726" y="614" font-size="11" fill="#9A9A9A"><tspan fill="#00F5D4" font-weight="600">← 02</tspan>　一致性锚点，措辞不漂移</text>
+
+    <rect x="712" y="646" width="216" height="24" rx="3" fill="#0A0A0A" stroke="#2E2E2E"/>
+    <text x="726" y="662" font-size="11" fill="#9A9A9A"><tspan fill="#00F5D4" font-weight="600">← 01</tspan>　景别列 / 运镜列</text>
+
+    <rect x="712" y="670" width="216" height="24" rx="3" fill="#0A0A0A" stroke="#2E2E2E"/>
+    <text x="726" y="686" font-size="11" fill="#9A9A9A"><tspan fill="#00F5D4" font-weight="600">← 01</tspan>　时长列，严格照抄</text>
+
+    <text x="48" y="756" font-size="12.5" fill="#5C5C5C">硬性规则：不引入 01 / 02 中不存在的元素 · 资产名唯一、别名在索引表统一 · 提示词条数与分镜数逐一对齐，不遗漏不新增</text>
+
+  </g>
+</svg>

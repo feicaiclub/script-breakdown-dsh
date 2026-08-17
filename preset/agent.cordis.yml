@@ -1,0 +1,94 @@
+# `script-breakdown` agent preset：剧本拆解工作流。
+#
+# 这是 AGENT-PLANE 组合：本文件只写"一个会话贡献给各注册表的东西"——工具行、
+# persona、compaction 策略。注册表本身、沙箱与审批栈、持久化、模型路由、
+# subagent registry、goal 服务与 /goal 命令都住在 HOST 组合里，此处只挂
+# 消费它们的工具行（这些行发布任何 service，都必须进带 `isolate` realm 的
+# group，否则第二个会话挂载即冲突，mount 会直接拒绝）。
+#
+# 本组合是对话式工作流的最小集：不挂 jobs / goal / plan-mode / delegation /
+# web 相关工具行——这条流水线只需要读写文件、搜索、提问与技能加载四件事。
+
+# ── 身份 ────────────────────────────────────────────────────────────────────
+
+# persona 以 scoped `deployment:persona` 段（order 0）遮蔽部署默认，仅对本
+# 模式的会话生效。`{{model}}` 与 `{{cwd}}` 由 agent 自身的模型路由与工作区解析。
+- id: persona
+  name: '@deepseek-ai/dsh-persona'
+  config:
+    text: |-
+      You are 剧本拆解工作流 — 一名深谙导演思维的 AI 影视编导，powered by the {{model}} model, running on the DeepSeek Harness. Your working directory is {{cwd}}.
+
+      你把剧本变成 AI 视频生成的前制资产：以导演讲戏思维拆解剧本、列出全部分镜，为人物 / 场景 / 道具写即梦中文提示词，最后为每个分镜写即梦口径的视频提示词。你不实际生成视频或图片，也不调用任何生成 API。
+
+      工作纪律：
+      - 用户上传 .txt/.md 剧本、粘贴剧本文字、要求拆解 / 重做 / 查看上次结果时，先加载 script-breakdown skill（总路由），按它的工作流与协议执行；三个阶段分别加载 script-breakdown-stage1、script-asset-prompts、script-shot-prompts。
+      - 每阶段产物落盘后停下，用 ask_user_question 询问确认或修改，绝不跳过确认直接进入下一阶段。
+      - 只写工作区内的 拆解结果/ 与 .script-breakdown/ 两个目录；重做前先把上一版备份进 历史版本/。
+      - 用专业编导语言沟通：景别、运镜、调度术语直接使用，不做教学式解释。
+      - 支持文件与模板随本 preset 分发在 `${DSH_HOME:-$HOME/.dsh}/.agent-presets/script-breakdown/skills/`（bash 中先定义变量再引用）。
+
+- id: agent-instructions
+  name: '@deepseek-ai/dsh-agent-instructions'
+  config:
+    maxBytes: 65536
+
+# ── 文件系统 ─────────────────────────────────────────────────────────────────
+
+# 两行都只注册进 host `tools` 注册表、不发布任何 service，无需 realm。
+- id: tool-fs
+  name: '@deepseek-ai/dsh-tool-fs'
+
+- id: tool-fs-search
+  name: '@deepseek-ai/dsh-tool-fs-search'
+  config:
+    sampleOverCapGlobResults: false
+
+# ── compaction ──────────────────────────────────────────────────────────────
+
+# tokenMeter 留在 host（其投影单元供浏览器读取）；preset 决定本模式的
+# agent 是否做压缩，即下面的 compaction-basic。
+- id: compaction
+  name: cordis:group
+  group: true
+  isolate:
+    compaction: true
+    toolResultPruner: true
+  config:
+    - id: compaction-basic
+      name: '@deepseek-ai/dsh-compaction-basic'
+
+    - id: command-compact
+      name: '@deepseek-ai/dsh-command-compact'
+
+    - id: tool-result-pruner
+      name: '@deepseek-ai/dsh-compaction-tool-result-pruner'
+      config:
+        thresholdChars: 8192
+        headChars: 4096
+        tailChars: 1024
+
+# ── 其余模型面工具行 ─────────────────────────────────────────────────────────
+
+# ask_user_question：阶段确认与指代消歧的提问载体（子代理不可提问）。
+- id: tool-ask-user
+  name: '@deepseek-ai/dsh-tool-ask-user'
+
+- id: tool-todo
+  name: '@deepseek-ai/dsh-tool-todo'
+  config:
+    allowParallelInProgress: true
+
+# ── 本 preset 专属 skills ────────────────────────────────────────────────────
+
+# 四个工作流 skill 随 preset 分发（baseUrl = preset 自身目录），注册进本
+# preset 的 scoped layer：只在本模式可见，不污染其他模式；全局层（~/.dsh/skills、
+# 项目 .dsh/skills）照常合并，项目级同名覆盖本层。
+- id: skill-filesystem
+  name: '@deepseek-ai/dsh-skill-filesystem'
+  config:
+    customSkillDirs:
+      - !!js "process.getBuiltinModule('node:url').fileURLToPath(new URL('skills/', baseUrl))"
+
+- id: tool-skill
+  name: '@deepseek-ai/dsh-tool-skill'

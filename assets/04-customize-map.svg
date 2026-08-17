@@ -1,0 +1,88 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 760" width="1000" height="760" role="img" aria-label="改造地图：从最轻到最重的四个改造层——模板层改 templates 下的模板文件、约束层改 SKILL.md 的规则段、方法论层改 references 下的方法论、流程层改 agent.cordis.yml 并新增技能目录；右侧列出四个最常见的改造需求分别改哪里。">
+  <title>改造地图：想变成你自己的工作流，改哪一层</title>
+
+  <rect x="0" y="0" width="1000" height="760" rx="16" fill="#0A0A0A"/>
+  <rect x="0.5" y="0.5" width="999" height="759" rx="16" fill="none" stroke="#222222"/>
+
+  <g font-family="'PingFang SC','HarmonyOS Sans SC','Alibaba PuHuiTi','Source Han Sans SC','Noto Sans SC',system-ui,sans-serif">
+
+    <text x="48" y="52" font-size="10.5" font-weight="700" letter-spacing="2.6" fill="#5C5C5C" font-family="'JetBrains Mono','SF Mono',monospace">FIG. 04 / CUSTOMIZATION MAP</text>
+    <text x="48" y="86" font-size="25" font-weight="600" fill="#F5F2EC">改造地图：想变成你自己的工作流，改哪一层</text>
+    <text x="48" y="112" font-size="14" fill="#9A9A9A">全部方法论都写在 markdown 里 —— 不用写一行代码，用文本编辑器改完存盘，下次对话就是新的它。</text>
+
+    <!-- ── 层 1 ── -->
+    <rect x="48" y="140" width="520" height="118" rx="10" fill="#111111" stroke="#222222"/>
+    <text x="72" y="172" font-size="15.5" font-weight="600" fill="#F5F2EC">模板层</text>
+    <text x="496" y="171" font-size="10.5" fill="#5C5C5C" text-anchor="end">最轻</text>
+    <circle cx="508" cy="167" r="4" fill="#00F5D4"/><circle cx="520" cy="167" r="4" fill="#2E2E2E"/>
+    <circle cx="532" cy="167" r="4" fill="#2E2E2E"/><circle cx="544" cy="167" r="4" fill="#2E2E2E"/>
+    <text x="72" y="194" font-size="11" fill="#00F5D4" font-family="'JetBrains Mono','SF Mono',monospace">preset/skills/*/templates/*.md</text>
+    <text x="72" y="222" font-size="12.5" fill="#9A9A9A">分镜总表有哪几列、资产小节长什么样、七段式提示词的段落顺序</text>
+    <text x="72" y="244" font-size="12.5" fill="#9A9A9A">把整个模板换成你自己那套，输出格式立刻跟着变</text>
+
+    <!-- ── 层 2 ── -->
+    <rect x="48" y="274" width="520" height="118" rx="10" fill="#111111" stroke="#222222"/>
+    <text x="72" y="306" font-size="15.5" font-weight="600" fill="#F5F2EC">约束层</text>
+    <text x="496" y="305" font-size="10.5" fill="#5C5C5C" text-anchor="end">轻</text>
+    <circle cx="508" cy="301" r="4" fill="#00F5D4"/><circle cx="520" cy="301" r="4" fill="#00F5D4"/>
+    <circle cx="532" cy="301" r="4" fill="#2E2E2E"/><circle cx="544" cy="301" r="4" fill="#2E2E2E"/>
+    <text x="72" y="328" font-size="11" fill="#00F5D4" font-family="'JetBrains Mono','SF Mono',monospace">preset/skills/*/SKILL.md · 硬性规则 / 写作规则 段</text>
+    <text x="72" y="356" font-size="12.5" fill="#9A9A9A">每条提示词多少字、时长有哪几档、哪些词禁用、哪些字段必填</text>
+    <text x="72" y="378" font-size="12.5" fill="#9A9A9A">现在这些约束刻意写得很松 —— 这里就是留给你收紧的地方</text>
+
+    <!-- ── 层 3 ── -->
+    <rect x="48" y="408" width="520" height="118" rx="10" fill="#111111" stroke="#222222"/>
+    <text x="72" y="440" font-size="15.5" font-weight="600" fill="#F5F2EC">方法论层</text>
+    <text x="496" y="439" font-size="10.5" fill="#5C5C5C" text-anchor="end">中</text>
+    <circle cx="508" cy="435" r="4" fill="#00F5D4"/><circle cx="520" cy="435" r="4" fill="#00F5D4"/>
+    <circle cx="532" cy="435" r="4" fill="#00F5D4"/><circle cx="544" cy="435" r="4" fill="#2E2E2E"/>
+    <text x="72" y="462" font-size="11" fill="#00F5D4" font-family="'JetBrains Mono','SF Mono',monospace">preset/skills/*/references/*.md</text>
+    <text x="72" y="490" font-size="12.5" fill="#9A9A9A">导演讲戏的方法论、按类型走的分镜密度、长剧本的分块阈值</text>
+    <text x="72" y="512" font-size="12.5" fill="#9A9A9A">把你团队的分镜标准写进这里，它的思考方式就变成你的</text>
+
+    <!-- ── 层 4 ── -->
+    <rect x="48" y="542" width="520" height="118" rx="10" fill="#0D0F0F" stroke="#00F5D4" stroke-opacity="0.4"/>
+    <text x="72" y="574" font-size="15.5" font-weight="600" fill="#F5F2EC">流程层</text>
+    <text x="496" y="573" font-size="10.5" fill="#5C5C5C" text-anchor="end">要动结构</text>
+    <circle cx="508" cy="569" r="4" fill="#00F5D4"/><circle cx="520" cy="569" r="4" fill="#00F5D4"/>
+    <circle cx="532" cy="569" r="4" fill="#00F5D4"/><circle cx="544" cy="569" r="4" fill="#00F5D4"/>
+    <text x="72" y="596" font-size="11" fill="#00F5D4" font-family="'JetBrains Mono','SF Mono',monospace">preset/agent.cordis.yml + 新建 preset/skills/&lt;你的阶段&gt;/</text>
+    <text x="72" y="624" font-size="12.5" fill="#9A9A9A">增删环节：前面加一节「全片视觉设定」，后面加一节「配音脚本」</text>
+    <text x="72" y="646" font-size="12.5" fill="#9A9A9A">新建一个 skill 目录，再去 persona 里加一行 —— 流水线就多一节</text>
+
+    <!-- ══ 常见改造需求 ══ -->
+    <rect x="592" y="140" width="360" height="520" rx="10" fill="#111111" stroke="#222222"/>
+    <text x="616" y="171" font-size="10.5" font-weight="700" letter-spacing="2.2" fill="#5C5C5C" font-family="'JetBrains Mono','SF Mono',monospace">COMMON MODS</text>
+    <text x="616" y="195" font-size="15" font-weight="600" fill="#F5F2EC">四个最常见的改造需求</text>
+    <line x1="616" y1="211" x2="928" y2="211" stroke="#222222"/>
+
+    <text x="616" y="242" font-size="13" font-weight="600" fill="#E8E4DA">要精确到秒、要写微表情</text>
+    <text x="616" y="266" font-size="12" fill="#9A9A9A">给 storyboard-table.md 加列，再去</text>
+    <text x="616" y="288" font-size="12" fill="#9A9A9A">SKILL.md 把时长规则改成你的档位</text>
+    <line x1="616" y1="305" x2="928" y2="305" stroke="#1A1A1A"/>
+
+    <text x="616" y="332" font-size="13" font-weight="600" fill="#E8E4DA">换一个视频生成平台</text>
+    <text x="616" y="356" font-size="12" fill="#9A9A9A">七段式是即梦口径。换平台就整段替换</text>
+    <text x="616" y="378" font-size="12" fill="#9A9A9A">script-shot-prompts 的模板与写作规则</text>
+    <line x1="616" y1="395" x2="928" y2="395" stroke="#1A1A1A"/>
+
+    <text x="616" y="422" font-size="13" font-weight="600" fill="#E8E4DA">要整体设定与视觉设计</text>
+    <text x="616" y="446" font-size="12" fill="#9A9A9A">在阶段 1 前面加一节「全片视觉设定」，</text>
+    <text x="616" y="468" font-size="12" fill="#9A9A9A">让后面每一阶段都引用它的色调与风格</text>
+    <line x1="616" y1="485" x2="928" y2="485" stroke="#1A1A1A"/>
+
+    <text x="616" y="512" font-size="13" font-weight="600" fill="#E8E4DA">要配音脚本 / 字幕 / BGM</text>
+    <text x="616" y="536" font-size="12" fill="#9A9A9A">复制一个现成 skill 目录当模板，改名</text>
+    <text x="616" y="558" font-size="12" fill="#9A9A9A">改内容，再去 persona 里挂上这一节</text>
+
+    <rect x="612" y="590" width="320" height="56" rx="6" fill="#0D0F0F" stroke="#00F5D4" stroke-opacity="0.35"/>
+    <text x="632" y="614" font-size="12.5" font-weight="600" fill="#00F5D4">改完不用重启</text>
+    <text x="632" y="634" font-size="11.5" fill="#7A9A94">preset 目录每次读取都重扫，存盘即生效</text>
+
+    <!-- ══ 底注 ══ -->
+    <rect x="48" y="692" width="904" height="60" rx="10" fill="#0C130F" stroke="#00A85A" stroke-opacity="0.45"/>
+    <text x="72" y="720" font-size="14" font-weight="600" fill="#00A85A">为什么说它是「架子」，不是「成品」</text>
+    <text x="72" y="742" font-size="12.5" fill="#6E8A78">现在这一版的分镜粒度、提示词约束、模板结构，只实现了最基础的通用能力 —— 它跑得通，但它不懂你的行业。填进你自己的标准，它才真正好用。</text>
+
+  </g>
+</svg>

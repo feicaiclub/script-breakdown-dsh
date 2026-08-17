@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 420" width="1200" height="420" role="img" aria-label="剧本拆解工作流 —— DeepSeek Harness 预设，以导演讲戏的思维拆解剧本，产出即梦可直接开工的提示词文件包；右侧胶片格展示分镜总表、资产提示词、逐镜提示词三个阶段。">
+  <title>剧本拆解工作流 · DeepSeek Harness 预设</title>
+
+  <rect x="0" y="0" width="1200" height="420" rx="16" fill="#0A0A0A"/>
+  <rect x="0.5" y="0.5" width="1199" height="419" rx="16" fill="none" stroke="#222222"/>
+
+  <g font-family="'PingFang SC','HarmonyOS Sans SC','Alibaba PuHuiTi','Source Han Sans SC','Noto Sans SC',system-ui,sans-serif">
+
+    <!-- 左：标题区 -->
+    <rect x="64" y="112" width="44" height="3" fill="#00F5D4"/>
+    <text x="64" y="150" font-size="11" font-weight="700" letter-spacing="2.9" fill="#5C5C5C" font-family="'JetBrains Mono','Geist Mono','SF Mono',ui-monospace,monospace">DEEPSEEK HARNESS / AGENT PRESET</text>
+    <text x="64" y="206" font-size="44" font-weight="600" fill="#F5F2EC">剧本拆解工作流</text>
+    <text x="64" y="246" font-size="16" fill="#9A9A9A">以导演讲戏的思维拆解剧本，产出即梦可直接开工的提示词文件包</text>
+
+    <g font-size="13">
+      <rect x="64" y="288" width="118" height="32" rx="3" fill="#111111" stroke="#2E2E2E"/>
+      <text x="123" y="309" fill="#E8E4DA" text-anchor="middle"><tspan font-family="'JetBrains Mono','SF Mono',monospace" fill="#00F5D4">01</tspan>  拆解与分镜</text>
+      <rect x="194" y="288" width="112" height="32" rx="3" fill="#111111" stroke="#2E2E2E"/>
+      <text x="250" y="309" fill="#E8E4DA" text-anchor="middle"><tspan font-family="'JetBrains Mono','SF Mono',monospace" fill="#00F5D4">02</tspan>  资产提示词</text>
+      <rect x="318" y="288" width="138" height="32" rx="3" fill="#111111" stroke="#2E2E2E"/>
+      <text x="387" y="309" fill="#E8E4DA" text-anchor="middle"><tspan font-family="'JetBrains Mono','SF Mono',monospace" fill="#00F5D4">03</tspan>  逐镜视频提示词</text>
+    </g>
+
+    <text x="64" y="362" font-size="12.5" fill="#5C5C5C">不生成视频 · 不生成图片 · 不调用任何生成 API —— 只做前制资产</text>
+
+    <!-- 右：胶片 -->
+    <rect x="620" y="112" width="516" height="200" rx="6" fill="#111111" stroke="#222222"/>
+    <g fill="#0A0A0A">
+      <rect x="636" y="122" width="16" height="10" rx="2"/><rect x="670" y="122" width="16" height="10" rx="2"/>
+      <rect x="704" y="122" width="16" height="10" rx="2"/><rect x="738" y="122" width="16" height="10" rx="2"/>
+      <rect x="772" y="122" width="16" height="10" rx="2"/><rect x="806" y="122" width="16" height="10" rx="2"/>
+      <rect x="840" y="122" width="16" height="10" rx="2"/><rect x="874" y="122" width="16" height="10" rx="2"/>
+      <rect x="908" y="122" width="16" height="10" rx="2"/><rect x="942" y="122" width="16" height="10" rx="2"/>
+      <rect x="976" y="122" width="16" height="10" rx="2"/><rect x="1010" y="122" width="16" height="10" rx="2"/>
+      <rect x="1044" y="122" width="16" height="10" rx="2"/><rect x="1078" y="122" width="16" height="10" rx="2"/>
+      <rect x="636" y="292" width="16" height="10" rx="2"/><rect x="670" y="292" width="16" height="10" rx="2"/>
+      <rect x="704" y="292" width="16" height="10" rx="2"/><rect x="738" y="292" width="16" height="10" rx="2"/>
+      <rect x="772" y="292" width="16" height="10" rx="2"/><rect x="806" y="292" width="16" height="10" rx="2"/>
+      <rect x="840" y="292" width="16" height="10" rx="2"/><rect x="874" y="292" width="16" height="10" rx="2"/>
+      <rect x="908" y="292" width="16" height="10" rx="2"/><rect x="942" y="292" width="16" height="10" rx="2"/>
+      <rect x="976" y="292" width="16" height="10" rx="2"/><rect x="1010" y="292" width="16" height="10" rx="2"/>
+      <rect x="1044" y="292" width="16" height="10" rx="2"/><rect x="1078" y="292" width="16" height="10" rx="2"/>
+    </g>
+
+    <!-- 格 1 -->
+    <rect x="640" y="146" width="148" height="132" rx="3" fill="#0A0A0A" stroke="#2E2E2E"/>
+    <text x="656" y="177" font-size="19" font-weight="700" fill="#00F5D4" font-family="'JetBrains Mono','SF Mono',monospace">01</text>
+    <text x="656" y="201" font-size="12.5" fill="#E8E4DA">分镜总表</text>
+    <g stroke="#2E2E2E" stroke-width="1.5">
+      <line x1="656" y1="222" x2="772" y2="222"/><line x1="656" y1="236" x2="772" y2="236"/>
+      <line x1="656" y1="250" x2="772" y2="250"/><line x1="656" y1="264" x2="736" y2="264"/>
+      <line x1="694" y1="214" x2="694" y2="258"/><line x1="732" y1="214" x2="732" y2="258"/>
+    </g>
+
+    <!-- 格 2 -->
+    <rect x="804" y="146" width="148" height="132" rx="3" fill="#0A0A0A" stroke="#2E2E2E"/>
+    <text x="820" y="177" font-size="19" font-weight="700" fill="#00F5D4" font-family="'JetBrains Mono','SF Mono',monospace">02</text>
+    <text x="820" y="201" font-size="12.5" fill="#E8E4DA">资产提示词</text>
+    <g stroke="#2E2E2E" stroke-width="1.5" fill="none">
+      <circle cx="834" cy="234" r="9"/><line x1="826" y1="254" x2="842" y2="254"/>
+      <rect x="860" y="224" width="26" height="22" rx="2"/>
+      <path d="M902 246 L910 226 L918 246 z"/>
+      <line x1="820" y1="268" x2="924" y2="268"/>
+    </g>
+
+    <!-- 格 3 -->
+    <rect x="968" y="146" width="148" height="132" rx="3" fill="#0A0A0A" stroke="#2E2E2E"/>
+    <text x="984" y="177" font-size="19" font-weight="700" fill="#00F5D4" font-family="'JetBrains Mono','SF Mono',monospace">03</text>
+    <text x="984" y="201" font-size="12.5" fill="#E8E4DA">逐镜提示词</text>
+    <g stroke="#2E2E2E" stroke-width="1.5">
+      <line x1="984" y1="224" x2="1096" y2="224"/><line x1="984" y1="238" x2="1096" y2="238"/>
+      <line x1="984" y1="252" x2="1072" y2="252"/><line x1="984" y1="266" x2="1044" y2="266"/>
+    </g>
+
+    <!-- 格间箭头 -->
+    <g fill="#00F5D4">
+      <path d="M792 206 L800 212 L792 218 z"/>
+      <path d="M956 206 L964 212 L956 218 z"/>
+    </g>
+
+    <text x="878" y="348" font-size="11.5" fill="#5C5C5C" text-anchor="middle">每个阶段之间，都有一道停下来等你确认的门</text>
+
+  </g>
+</svg>
