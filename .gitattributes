@@ -1,0 +1,7 @@
+# 本仓库的主体是 markdown 方法论，不是脚本。
+# 默认 linguist 把 markdown 当 prose 排除在外，语言条会显示成 "Shell 100%"，
+# 与实际内容不符 —— 这里把 markdown 打开，让统计反映真实构成。
+*.md linguist-detectable=true
+
+# 图是文档资源，不参与语言统计。
+assets/** linguist-documentation=true
